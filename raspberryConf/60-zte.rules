@@ -1,0 +1,13 @@
+############### udev conf for use zte mf190 to modem mode
+
+
+SUBSYSTEM=="usb", SYSFS{idProduct}=="2000", SYSFS{idVendor}=="19d2", RUN+="/usr/local/sbin/usb_modeswitch"
+SUBSYSTEM=="usb", SYSFS{idProduct}=="0010", SYSFS{idVendor}=="19d2", RUN+="/bin/sleep 30"
+SUBSYSTEM=="usb", SYSFS{idProduct}=="0010", SYSFS{idVendor}=="19d2", RUN+="/sbin/modprobe usbserial vendor=0x19d2 product=0x0010"
+
+
+
+
+
+
+
