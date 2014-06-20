@@ -64,6 +64,18 @@ Script permettant de verifier la connexion 3g à placer dans /usr/bin/3Gtest :
         	echo "Already connect"
 	fi
 
+On fait un lien symbolique dans /etc/cron.hourly/
+
+	cd /etc/cron.hourly
+	sudo ln -s /usr/bin/3Gtest 3Gtest
+
+Comme cela il sera executé toute les heures en cas de perte du réseau
+
+un second pour faire le test au démarrage : (je n'ai pas trouvé comment lancer un script au démarrage avec argument genre sakis3g start)
+
+	cd /etc/init.d/
+	sudo ln -s /usr/bin/3Gtest 3Gtest
+	sudo update-rc.d 3Gtest defaults
 
 
 ###emoncms : 
@@ -81,6 +93,6 @@ il faut copier le répertoire oem_gateway dans /usb/bin puis placer le script oe
 vous devez arriver à un résultat similaire :
 	
 	/usr/bin/oemgateway/  	#le repertoire
-		/oemgateway	# le script
+	   	/oemgateway	# le script
 
 voir oemgateway et oemgateway.conf pour les configurations.
