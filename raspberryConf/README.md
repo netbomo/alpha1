@@ -20,7 +20,26 @@ http://lea-linux.org/documentations/Tutoriel_pour_d%C3%A9buter_avec_le_Raspberry
 
 http://itsacleanmachine.blogspot.fi/2012/11/raspberry-router.html
 
-	comment rendre sakis3g permanant ????
+copier sakis dans /usr/bin
+	
+	sudo mv sakis3g /usr/bin/sakis3g
+
+créer un deamon pour sakis3g :
+
+	sudo nano /etc/init.d/sakis3g 
+
+et coller le code de sakis3g
+
+trouver ici:
+
+http://www.raspberrypi.org/forums/viewtopic.php?f=31&t=40529
+
+et modifié pour rajouter la fonction restart.
+
+On lui rajoute la posibilité de s'executer :
+
+	sudo chmod +x /etc/init.d/sakis3g
+
 
 Création des règles udev pour le téléphone :
 
@@ -28,7 +47,24 @@ voir: 60-zte.rules
 
 Placer dans /etc/udev/rules.d/
 
+Script permettant de verifier la connexion 3g à placer dans /usr/bin/3Gtest :
 	
+	#! /bin/bash
+	# /usr/bin/3Gtest
+
+	PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+	echo "test de connexion 3G"
+
+	./sakis3g status
+
+	if [[ $?=6 ]]		# Valeur de non connexion
+	then sudo ./sakis3g start
+	else
+        	echo "Already connect"
+	fi
+
+
 
 ###emoncms : 
 

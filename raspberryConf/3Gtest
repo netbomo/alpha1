@@ -1,0 +1,16 @@
+#! /bin/bash
+# /usr/bin/3Gtest
+
+
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+echo "test de connexion 3G"
+
+./sakis3g status
+
+if [[ $?=6 ]]
+then sudo ./sakis3g start
+else
+        echo "Already connect"
+fi
+
+
