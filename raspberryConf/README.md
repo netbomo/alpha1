@@ -30,8 +30,10 @@ il faut copier le répertoire oem_gateway dans /usb/bin
 sudo oem_gateway.init.??? /etc/init.d/oemgateway
 
 paramètrer ce fichier:
+
 --- détails fichier ---
 
 éditer /usb/bin/oem_gateway/oemgateway.conf:
+
 --- détails fichier ----
 
