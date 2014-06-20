@@ -1,4 +1,5 @@
-#Capteur et interface
+Capteur et interface
+====================
 
 Nous avons 3 mesure à faire : 
 La mesure de la vitesse du vent
@@ -7,7 +8,7 @@ La puissance electrique fournie par l’éolienne
 
 
 
-#I] Mesure de la vitesse du vent
+###I] Mesure de la vitesse du vent
 
 Pour mesure la vitesse du vent nous utilisons un anémomètre NGR 40C. Cette anémomètre à l'avantage d'avoir un longue durée de vie (15ans environ). En sorti de l’anémomètre on observe un signal sinusoïdal de fréquence variant entre 0 et 120 Hz et d'amplitude de 40mV à 6V. La vitesse du vent est donnée par la relation [m/s = (Hz x 0,765) + 0.35]. Nous avons donc du crée l'interface permettant de mesurer la fréquence de ce signal :
 
@@ -25,13 +26,13 @@ nous utilisons ensuite un script arduino pour calculer la fréquence : voir vis
 
 
 
-#II]mesure de la direction du vent.
+###II]mesure de la direction du vent.
 
 On utilise un girouette : cette girouette est un potentiomètre rotatif :
 
 On rentre dans un entre analogique de la carte arduino avec Vs pour lire la direction du vent voir visu_vent_puissance.ino.
  
-#III]Mesure de puissance 
+###III]Mesure de puissance 
 
 On utilise un « Wattnode pulse » qui se branche sur la ligne avec une pince ampèremétrique et une prise de tension en parallèle.
 Ce système vas calculer la tension, le courant et le déphasage entre les 2 et sortir un signal carré comprit entre 0 et 5V.
