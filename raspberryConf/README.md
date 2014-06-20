@@ -25,6 +25,8 @@ http://openenergymonitor.blogspot.fr/2012/05/installing-emoncms-on-raspberry-pi.
 
 deamon oemgateway :
 il faut copier le répertoire oem_gateway dans /usb/bin
+	sudo mv ~/oem_gateway-master /usr/bin/oemgateway
+
 sudo oem_gateway.init.??? /etc/init.d/oemgateway
 
 paramètrer ce fichier:
