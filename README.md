@@ -1,14 +1,12 @@
 alpha1
 ======
 
-prototype shield for arduino with wind sensors end wind turbines power measurment
+Prototype de shield pour arduino, permettant de monitorer une éolienne.
 
 Projet :
 --------
 
-Le but est de créer un node compatible avec le système OpenEnergyMonitor.
-
-Pour cela nous allons commencer par créer un shield pour arduino permettant de relier les capteurs.
+Le but est de créer une shield pouvant par exemple de créer un node pour le système OpenEnergyMonitor ou se creffant sur une carte Akeru.
 
 ###Capteur désirés :
 
@@ -18,9 +16,9 @@ Pour cela nous allons commencer par créer un shield pour arduino permettant de 
 - capteur de tension 
 
 ###Etat des lieux :
- - interfaces catpeurs/arduino : ok
- - liaison arduino/raspberry : ok
- - liaison raspberry/internet via gprs : ok
+ - interfaces catpeurs/arduino : 50%
+ - liaison arduino/raspberry : 100%
+ - liaison raspberry/internet via gprs : 90%
 
 Le premier prototype sera bientôt installé.
 
