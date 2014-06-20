@@ -28,9 +28,16 @@ nous utilisons ensuite un script arduino pour calculer la fréquence : voir vis
 
 ###II]mesure de la direction du vent.
 
-On utilise un girouette : cette girouette est un potentiomètre rotatif :
+On utilise un girouette : cette girouette est un potentiomètre rotatif : voir le schéma girouette
 
-On rentre dans un entre analogique de la carte arduino avec Vs pour lire la direction du vent voir visu_vent_puissance.ino.
+On rentre dans un entre analogique de la carte arduino avec Vs pour lire la direction du vent.
+Comme on envoie des données toutes les 10 minutes il faut réaliser plusieur mesure avec la girouette pour pouvoir les moyenner et avoir un resultat concernant le vent dominant sur ces 10 minute et si il est ou non turbullent.
+Pour cela :
+On crée une boucle nous permetant de realiser plusieur mesure avant l'envoie, dans cette boucle on remap les valeur entre 0 et 360 degrée puis on divise le cercle en secteur et on incremente le secteur corespondant à la direction du vent pour pouvoir faire la moyenne 
+
+on calcule la moyenne pondéré des secteur par le nombre de valeur observé dans le secteur et l'écart-type
+
+voir visu_vent_puissance_moy.ino
  
 ###III]Mesure de puissance 
 
