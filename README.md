@@ -6,7 +6,7 @@ Prototype de shield pour arduino, permettant de monitorer une éolienne.
 Projet :
 --------
 
-Le but est de créer une shield pouvant par exemple de créer un node pour le système OpenEnergyMonitor ou se creffant sur une carte Akeru.
+Le but est de créer une shield pouvant par exemple de créer un node pour le système OpenEnergyMonitor ou se greffant sur une carte Akeru, une carte Arduino Yun...
 
 ###Capteur désirés :
 
