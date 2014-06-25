@@ -19,6 +19,8 @@ Le but est de créer une shield pouvant par exemple de créer un node pour le sy
 - capteur de courant
 - capteur de tension 
 
+note : Pour l'instant ma carte emontx ne fontionne plus, et la sonde de courant CT ne donne plus de valeur correcte, donc nous utilisons un WattNode Pulse ainsi qu'une carte arduino UNO.
+
 ###Etat des lieux :
  - interfaces catpeurs/arduino : 50%
  - liaison arduino/raspberry : 100%
