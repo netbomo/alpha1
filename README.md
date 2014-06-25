@@ -3,6 +3,10 @@ alpha1
 
 Prototype de shield pour arduino, permettant de monitorer une éolienne.
 
+Voir les premières données :
+
+http://desplanchesdepalette.org/colibri/Colibri_Energie.html
+
 Projet :
 --------
 
