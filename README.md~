@@ -22,12 +22,11 @@ Le but est de créer une shield pouvant par exemple de créer un node pour le sy
 note : Pour l'instant ma carte emontx ne fontionne plus, et la sonde de courant CT ne donne plus de valeur correcte, donc nous utilisons un WattNode Pulse ainsi qu'une carte arduino UNO.
 
 ###Etat des lieux :
- - shield : 50%
- - Code arduino : 20% version : visu_vent_puissance
+ - interfaces catpeurs/arduino : 50%
  - liaison arduino/raspberry : 100%
  - liaison raspberry/internet via gprs : 90%
 
-Le premier prototype est installé.
+Le premier prototype sera bientôt installé.
 
 ###Remerciments :
 
