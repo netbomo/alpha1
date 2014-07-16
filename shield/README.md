@@ -8,4 +8,5 @@ Caractéristiques recherchées pour le shield :
 - 1à 3 CT (mesures de courant) comme sur le système Open Energy Monitor
 
 Avoir la possibilité de mettre un modem rfm12b
+
 Pouvoir dialoguer avec l'akeru
