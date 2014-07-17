@@ -8256,11 +8256,16 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="U$4" library="JeeParts" deviceset="RFM12B" device=""/>
 <part name="U$2" library="adafruit" deviceset="ARDUINO" device="-BPLACE"/>
-<part name="ANEMO" library="adafruit" deviceset="1X4" device="-3.5MM"/>
 <part name="WINDVANE" library="adafruit" deviceset="1X4" device="-3.5MM"/>
 <part name="R17" library="rcl" deviceset="R-EU_" device="0204/7" value="10k"/>
 <part name="R21" library="rcl" deviceset="R-EU_" device="0204/7" value="10k"/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
+<part name="ANEMO1" library="adafruit" deviceset="1X4" device="-3.5MM"/>
+<part name="ANEMO2" library="adafruit" deviceset="1X4" device="-3.5MM"/>
+<part name="R22" library="rcl" deviceset="R-EU_" device="0204/7" value="10k"/>
+<part name="R23" library="rcl" deviceset="R-EU_" device="0204/7" value="10k"/>
+<part name="P+11" library="supply1" deviceset="+5V" device=""/>
+<part name="P+14" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8410,11 +8415,16 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="P+13" gate="1" x="-7.62" y="332.74"/>
 <instance part="U$4" gate="G$1" x="147.32" y="217.17"/>
 <instance part="U$2" gate="G$1" x="144.78" y="321.31" rot="R270"/>
-<instance part="ANEMO" gate="G$1" x="-66.04" y="373.38" rot="MR0"/>
-<instance part="WINDVANE" gate="G$1" x="-66.04" y="347.98" rot="MR0"/>
-<instance part="R17" gate="G$1" x="-58.42" y="355.6" rot="R90"/>
-<instance part="R21" gate="G$1" x="-48.26" y="340.36" rot="R90"/>
-<instance part="P+5" gate="1" x="-58.42" y="365.76"/>
+<instance part="WINDVANE" gate="G$1" x="-63.5" y="294.64" rot="MR0"/>
+<instance part="R17" gate="G$1" x="-55.88" y="302.26" rot="R90"/>
+<instance part="R21" gate="G$1" x="-45.72" y="287.02" rot="R90"/>
+<instance part="P+5" gate="1" x="-55.88" y="312.42"/>
+<instance part="ANEMO1" gate="G$1" x="-63.5" y="373.38" rot="MR0"/>
+<instance part="ANEMO2" gate="G$1" x="-63.5" y="347.98" rot="MR0"/>
+<instance part="R22" gate="G$1" x="76.2" y="363.22" rot="R90"/>
+<instance part="R23" gate="G$1" x="66.04" y="325.12" rot="R90"/>
+<instance part="P+11" gate="1" x="76.2" y="373.38"/>
+<instance part="P+14" gate="1" x="66.04" y="335.28"/>
 </instances>
 <busses>
 </busses>
@@ -8467,7 +8477,17 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <segment>
 <pinref part="P+5" gate="1" pin="+5V"/>
 <pinref part="R17" gate="G$1" pin="2"/>
-<wire x1="-58.42" y1="363.22" x2="-58.42" y2="360.68" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="309.88" x2="-55.88" y2="307.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+11" gate="1" pin="+5V"/>
+<pinref part="R22" gate="G$1" pin="2"/>
+<wire x1="76.2" y1="370.84" x2="76.2" y2="368.3" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+14" gate="1" pin="+5V"/>
+<pinref part="R23" gate="G$1" pin="2"/>
+<wire x1="66.04" y1="332.74" x2="66.04" y2="330.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="2">
@@ -8599,13 +8619,23 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 </segment>
 <segment>
 <pinref part="WINDVANE" gate="G$1" pin="4"/>
-<wire x1="-60.96" y1="342.9" x2="-58.42" y2="342.9" width="0.1524" layer="91"/>
-<label x="-55.88" y="342.9" size="1.778" layer="95"/>
+<wire x1="-58.42" y1="289.56" x2="-55.88" y2="289.56" width="0.1524" layer="91"/>
+<label x="-53.34" y="289.56" size="1.778" layer="95"/>
 <pinref part="R21" gate="G$1" pin="1"/>
-<wire x1="-58.42" y1="342.9" x2="-53.34" y2="342.9" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="335.28" x2="-58.42" y2="335.28" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="335.28" x2="-58.42" y2="342.9" width="0.1524" layer="91"/>
-<junction x="-58.42" y="342.9"/>
+<wire x1="-55.88" y1="289.56" x2="-50.8" y2="289.56" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="281.94" x2="-55.88" y2="281.94" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="281.94" x2="-55.88" y2="289.56" width="0.1524" layer="91"/>
+<junction x="-55.88" y="289.56"/>
+</segment>
+<segment>
+<pinref part="ANEMO1" gate="G$1" pin="4"/>
+<wire x1="-48.26" y1="368.3" x2="-58.42" y2="368.3" width="0.1524" layer="91"/>
+<label x="-48.26" y="368.3" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ANEMO2" gate="G$1" pin="4"/>
+<wire x1="-48.26" y1="342.9" x2="-58.42" y2="342.9" width="0.1524" layer="91"/>
+<label x="-48.26" y="342.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -8715,8 +8745,8 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 </segment>
 <segment>
 <pinref part="WINDVANE" gate="G$1" pin="2"/>
-<wire x1="-60.96" y1="347.98" x2="-53.34" y2="347.98" width="0.1524" layer="91"/>
-<label x="-55.88" y="347.98" size="1.778" layer="95"/>
+<wire x1="-58.42" y1="294.64" x2="-50.8" y2="294.64" width="0.1524" layer="91"/>
+<label x="-53.34" y="294.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ADC4" class="0">
@@ -8920,9 +8950,18 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="R27" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="355.6" x2="68.58" y2="345.44" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="345.44" x2="63.5" y2="345.44" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="355.6" x2="73.66" y2="355.6" width="0.1524" layer="91"/>
-<label x="73.66" y="355.6" size="1.778" layer="95"/>
+<wire x1="68.58" y1="355.6" x2="76.2" y2="355.6" width="0.1524" layer="91"/>
+<label x="86.36" y="355.6" size="1.778" layer="95"/>
 <junction x="68.58" y="355.6"/>
+<pinref part="R22" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="355.6" x2="88.9" y2="355.6" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="358.14" x2="76.2" y2="355.6" width="0.1524" layer="91"/>
+<junction x="76.2" y="355.6"/>
+</segment>
+<segment>
+<pinref part="ANEMO1" gate="G$1" pin="3"/>
+<wire x1="-48.26" y1="370.84" x2="-58.42" y2="370.84" width="0.1524" layer="91"/>
+<label x="-48.26" y="370.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DIG4" class="0">
@@ -9071,16 +9110,25 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="60.96" y1="307.34" x2="55.88" y2="307.34" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="B" pin="OUT"/>
 <wire x1="58.42" y1="317.5" x2="60.96" y2="317.5" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="317.5" x2="71.12" y2="317.5" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="317.5" x2="66.04" y2="317.5" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="317.5" x2="76.2" y2="317.5" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="307.34" x2="60.96" y2="317.5" width="0.1524" layer="91"/>
 <junction x="60.96" y="317.5"/>
-<label x="66.04" y="317.5" size="1.778" layer="95"/>
+<label x="71.12" y="317.5" size="1.778" layer="95"/>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="320.04" x2="66.04" y2="317.5" width="0.1524" layer="91"/>
+<junction x="66.04" y="317.5"/>
 </segment>
 <segment>
 <pinref part="SJ2" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="182.88" x2="137.16" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="177.8" x2="121.92" y2="177.8" width="0.1524" layer="91"/>
 <label x="121.92" y="177.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ANEMO2" gate="G$1" pin="3"/>
+<wire x1="-48.26" y1="345.44" x2="-58.42" y2="345.44" width="0.1524" layer="91"/>
+<label x="-48.26" y="345.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -9161,64 +9209,64 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 </net>
 <net name="ANEMO1A" class="0">
 <segment>
-<pinref part="ANEMO" gate="G$1" pin="1"/>
-<wire x1="-60.96" y1="375.92" x2="-53.34" y2="375.92" width="0.1524" layer="91"/>
-<label x="-55.88" y="375.92" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="R31" gate="G$1" pin="1"/>
 <wire x1="-25.4" y1="360.68" x2="-35.56" y2="360.68" width="0.1524" layer="91"/>
 <label x="-43.18" y="360.68" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="ANEMO1" gate="G$1" pin="1"/>
+<wire x1="-58.42" y1="375.92" x2="-48.26" y2="375.92" width="0.1524" layer="91"/>
+<label x="-48.26" y="375.92" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="ANEMO1B" class="0">
-<segment>
-<pinref part="ANEMO" gate="G$1" pin="2"/>
-<wire x1="-60.96" y1="373.38" x2="-53.34" y2="373.38" width="0.1524" layer="91"/>
-<label x="-55.88" y="373.38" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="R32" gate="G$1" pin="1"/>
 <wire x1="-25.4" y1="355.6" x2="-35.56" y2="355.6" width="0.1524" layer="91"/>
 <label x="-43.18" y="355.6" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="ANEMO1" gate="G$1" pin="2"/>
+<wire x1="-48.26" y1="373.38" x2="-58.42" y2="373.38" width="0.1524" layer="91"/>
+<label x="-48.26" y="373.38" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="ANEMO2A" class="0">
-<segment>
-<pinref part="ANEMO" gate="G$1" pin="3"/>
-<wire x1="-60.96" y1="370.84" x2="-53.34" y2="370.84" width="0.1524" layer="91"/>
-<label x="-55.88" y="370.84" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="R40" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="322.58" x2="-43.18" y2="322.58" width="0.1524" layer="91"/>
 <label x="-48.26" y="322.58" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="ANEMO2" gate="G$1" pin="1"/>
+<wire x1="-48.26" y1="350.52" x2="-58.42" y2="350.52" width="0.1524" layer="91"/>
+<label x="-48.26" y="350.52" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="ANEMO2B" class="0">
-<segment>
-<pinref part="ANEMO" gate="G$1" pin="4"/>
-<wire x1="-60.96" y1="368.3" x2="-53.34" y2="368.3" width="0.1524" layer="91"/>
-<label x="-55.88" y="368.3" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="R41" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="317.5" x2="-43.18" y2="317.5" width="0.1524" layer="91"/>
 <label x="-48.26" y="317.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ANEMO2" gate="G$1" pin="2"/>
+<wire x1="-48.26" y1="347.98" x2="-58.42" y2="347.98" width="0.1524" layer="91"/>
+<label x="-48.26" y="347.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R17" gate="G$1" pin="1"/>
 <pinref part="WINDVANE" gate="G$1" pin="1"/>
-<wire x1="-58.42" y1="350.52" x2="-60.96" y2="350.52" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="297.18" x2="-58.42" y2="297.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="WINDVANE" gate="G$1" pin="3"/>
 <pinref part="R21" gate="G$1" pin="2"/>
-<wire x1="-60.96" y1="345.44" x2="-48.26" y2="345.44" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="292.1" x2="-45.72" y2="292.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
