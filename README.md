@@ -22,13 +22,7 @@ Le but est de créer une shield pouvant par exemple de créer un node pour le sy
 note : Pour l'instant ma carte emontx ne fontionne plus, et la sonde de courant CT ne donne plus de valeur correcte, donc nous utilisons un WattNode Pulse ainsi qu'une carte arduino UNO.
 
 ###Etat des lieux :
- - shield : 50%
- - Code arduino : 20% version : visu_vent_puissance
- - liaison arduino/raspberry : 100%
- - liaison raspberry/internet via gprs : 90%
+ Le systême fonctionne à l'atelier, mais pose problème en situation, la présence proche du réseau à l'air d'en être la cause. La prochaine modification sera de mettre le systême dans un boitier métalique avec une mise à la masse. Une carte de meilleure qualité devrait aider aussi.
 
 Le premier prototype est installé.
 
-###Remerciments :
-
-Merci à toute la communauté OpenEnergyMonitor ainsi qu'à toutes les personnes vers qui je renvois des liens (et aux auteurs des centaines d'articles que nous parcourons). Nous passons des heures à apprendre en lisant ce que vous offrez à tout le monde. Cela nous permet aujourd'hui de nous lancer dans cette aventure.
