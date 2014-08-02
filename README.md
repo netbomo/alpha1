@@ -24,5 +24,4 @@ note : Pour l'instant ma carte emontx ne fontionne plus, et la sonde de courant 
 ###Etat des lieux :
  Le systême fonctionne à l'atelier, mais pose problème en situation, la présence proche du réseau à l'air d'en être la cause. La prochaine modification sera de mettre le systême dans un boitier métalique avec une mise à la masse. Une carte de meilleure qualité devrait aider aussi.
 
-Le premier prototype est installé.
-
+Le premier prototype est installé avec la version du programme netbomo.ino
