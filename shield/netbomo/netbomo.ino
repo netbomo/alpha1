@@ -4,7 +4,6 @@ float windPower = 0;
 float hertz =0;
 int ibiTime_anemo_1 = 0;
 int lastTime_anemo_1 = 0;
-int windVaneOffSet = 140;
 
 // Définitions pour le wattNode
 float powerProductMoy = 0;
@@ -13,9 +12,12 @@ int lastTime_PowerProduct = 0;
 
 // Définition pour la girouette
 const int WindVane = 0;
-int dirVent = 0;
-int dirVentMoy=0;
-
+int windVaneValue = 0;
+//int dirVentMoy=0;//old version
+int windVaneOffSet = 140;
+//new version
+int columns = 8;
+int windDirection = 0;
 
 int node_id=6;  // Référence du node pour Emoncms
 
