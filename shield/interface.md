@@ -6,6 +6,7 @@ Nous avons 4 mesures à faire :
 - La mesure de la vitesse du vent
 - La direction du vent
 - La courant électrique fournie par l’éolienne 
+- La tension fournie électrique fournie par l'éolienne
 
 
 
