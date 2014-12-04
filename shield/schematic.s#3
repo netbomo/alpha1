@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -135,7 +135,7 @@
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
-<schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
+<schematic>
 <libraries>
 <library name="pinhead">
 <packages>
@@ -12411,6 +12411,10 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="111.76" y1="308.61" x2="109.22" y2="308.61" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<wire x1="172.72" y1="328.93" x2="181.61" y2="328.93" width="0.1524" layer="91"/>
+<label x="180.34" y="328.93" size="1.778" layer="95"/>
+</segment>
+<segment>
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
 <wire x1="-55.88" y1="227.33" x2="-55.88" y2="222.25" width="0.1524" layer="91"/>
 <pinref part="CT1" gate="1" pin="4"/>
@@ -12485,11 +12489,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="-48.26" y1="342.9" x2="-58.42" y2="342.9" width="0.1524" layer="91"/>
 <label x="-48.26" y="342.9" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="182.88" y1="328.93" x2="172.72" y2="328.93" width="0.1524" layer="91"/>
-<label x="182.88" y="328.93" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="MISO" class="0">
 <segment>
@@ -12504,9 +12503,8 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="U$4" gate="G$1" pin="SDO"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="D12"/>
-<wire x1="182.88" y1="323.85" x2="172.72" y2="323.85" width="0.1524" layer="91"/>
-<label x="182.88" y="323.85" size="1.778" layer="95"/>
+<wire x1="172.72" y1="323.85" x2="181.61" y2="323.85" width="0.1524" layer="91"/>
+<label x="180.34" y="323.85" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -12521,9 +12519,8 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <label x="92.71" y="242.57" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="D13"/>
-<wire x1="182.88" y1="326.39" x2="172.72" y2="326.39" width="0.1524" layer="91"/>
-<label x="182.88" y="326.39" size="1.778" layer="95"/>
+<wire x1="172.72" y1="326.39" x2="181.61" y2="326.39" width="0.1524" layer="91"/>
+<label x="180.34" y="326.39" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -12538,9 +12535,9 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <label x="106.68" y="240.03" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="D11"/>
-<wire x1="182.88" y1="321.31" x2="172.72" y2="321.31" width="0.1524" layer="91"/>
-<label x="182.88" y="321.31" size="1.778" layer="95"/>
+<label x="180.34" y="321.31" size="1.778" layer="95"/>
+<wire x1="180.34" y1="321.31" x2="181.61" y2="321.31" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="321.31" x2="180.34" y2="321.31" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ADC0" class="0">
@@ -12556,10 +12553,15 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <segment>
 <pinref part="U$2" gate="G$1" pin="A0"/>
 <wire x1="111.76" y1="300.99" x2="100.33" y2="300.99" width="0.1524" layer="91"/>
-<label x="95.25" y="300.99" size="1.778" layer="95"/>
+<label x="100.33" y="302.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ADC1" class="0">
+<segment>
+<label x="95.25" y="298.45" size="1.778" layer="95"/>
+<wire x1="109.22" y1="298.45" x2="100.33" y2="298.45" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="298.45" x2="109.22" y2="298.45" width="0.1524" layer="91"/>
+</segment>
 <segment>
 <pinref part="CT1" gate="1" pin="1"/>
 <wire x1="-43.18" y1="234.95" x2="-50.8" y2="234.95" width="0.1524" layer="91"/>
@@ -12572,13 +12574,14 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="R16" gate="G$1" pin="2"/>
 <junction x="-43.18" y="234.95"/>
 </segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="A1"/>
-<wire x1="111.76" y1="298.45" x2="100.33" y2="298.45" width="0.1524" layer="91"/>
-<label x="95.25" y="298.45" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="ADC2" class="0">
+<segment>
+<label x="95.25" y="295.91" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="A2"/>
+<wire x1="109.22" y1="295.91" x2="100.33" y2="295.91" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="295.91" x2="109.22" y2="295.91" width="0.1524" layer="91"/>
+</segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="-40.64" y1="269.24" x2="-40.64" y2="274.32" width="0.1524" layer="91"/>
@@ -12590,22 +12593,24 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="-45.72" y1="269.24" x2="-40.64" y2="269.24" width="0.1524" layer="91"/>
 <junction x="-45.72" y="269.24"/>
 </segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="A2"/>
-<wire x1="100.33" y1="295.91" x2="111.76" y2="295.91" width="0.1524" layer="91"/>
-<label x="95.25" y="295.91" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="ADC3" class="0">
+<segment>
+<label x="95.25" y="293.37" size="1.778" layer="95"/>
+<wire x1="109.22" y1="293.37" x2="100.33" y2="293.37" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="293.37" x2="109.22" y2="293.37" width="0.1524" layer="91"/>
+</segment>
 <segment>
 <pinref part="WINDVANE" gate="G$1" pin="2"/>
 <wire x1="-58.42" y1="294.64" x2="-50.8" y2="294.64" width="0.1524" layer="91"/>
 <label x="-53.34" y="294.64" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="ADC4" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="A3"/>
-<wire x1="100.33" y1="293.37" x2="111.76" y2="293.37" width="0.1524" layer="91"/>
-<label x="95.25" y="293.37" size="1.778" layer="95"/>
+<label x="95.25" y="290.83" size="1.778" layer="95"/>
+<wire x1="109.22" y1="290.83" x2="100.33" y2="290.83" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="290.83" x2="109.22" y2="290.83" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$33" class="0">
@@ -12719,26 +12724,31 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 </net>
 <net name="DIG2" class="0">
 <segment>
+<wire x1="172.72" y1="295.91" x2="181.61" y2="295.91" width="0.1524" layer="91"/>
+<label x="180.34" y="295.91" size="1.778" layer="95"/>
+</segment>
+<segment>
 <pinref part="SJ2" gate="G$1" pin="2"/>
 <wire x1="132.08" y1="187.96" x2="121.92" y2="187.96" width="0.1524" layer="91"/>
 <label x="119.38" y="187.96" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="D2"/>
-<wire x1="181.61" y1="295.91" x2="172.72" y2="295.91" width="0.1524" layer="91"/>
-<label x="181.61" y="295.91" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="DIG10" class="0">
+<segment>
+<wire x1="172.72" y1="318.77" x2="181.61" y2="318.77" width="0.1524" layer="91"/>
+<label x="180.34" y="318.77" size="1.778" layer="95"/>
+</segment>
 <segment>
 <pinref part="SJ1" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="251.46" x2="137.16" y2="259.08" width="0.1524" layer="91"/>
 <label x="137.16" y="254" size="1.778" layer="95" rot="R90"/>
 </segment>
+</net>
+<net name="ADC5" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D10"/>
-<wire x1="172.72" y1="318.77" x2="181.61" y2="318.77" width="0.1524" layer="91"/>
-<label x="181.61" y="318.77" size="1.778" layer="95"/>
+<label x="95.25" y="288.29" size="1.778" layer="95"/>
+<wire x1="109.22" y1="288.29" x2="100.33" y2="288.29" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="288.29" x2="109.22" y2="288.29" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3.3V" class="1">
@@ -12766,28 +12776,35 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <label x="82.55" y="224.79" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="D9"/>
-<wire x1="172.72" y1="316.23" x2="181.61" y2="316.23" width="0.1524" layer="91"/>
-<label x="181.61" y="316.23" size="1.778" layer="95"/>
+<label x="180.34" y="316.23" size="1.778" layer="95"/>
+<wire x1="179.07" y1="316.23" x2="181.61" y2="316.23" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="316.23" x2="179.07" y2="316.23" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DIG8" class="0">
+<segment>
+<label x="180.34" y="313.69" size="1.778" layer="95"/>
+<wire x1="176.53" y1="313.69" x2="181.61" y2="313.69" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="313.69" x2="176.53" y2="313.69" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RX" class="0">
 <segment>
+<wire x1="172.72" y1="290.83" x2="181.61" y2="290.83" width="0.1524" layer="91"/>
 <label x="180.34" y="290.83" size="1.778" layer="95"/>
-<wire x1="176.53" y1="290.83" x2="181.61" y2="290.83" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="D0"/>
-<wire x1="176.53" y1="290.83" x2="172.72" y2="290.83" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TX" class="0">
 <segment>
+<wire x1="172.72" y1="293.37" x2="181.61" y2="293.37" width="0.1524" layer="91"/>
 <label x="180.34" y="293.37" size="1.778" layer="95"/>
-<wire x1="175.26" y1="293.37" x2="181.61" y2="293.37" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="D1"/>
-<wire x1="175.26" y1="293.37" x2="172.72" y2="293.37" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DIG3" class="0">
+<segment>
+<wire x1="172.72" y1="298.45" x2="181.61" y2="298.45" width="0.1524" layer="91"/>
+<label x="180.34" y="298.45" size="1.778" layer="95"/>
+</segment>
 <segment>
 <pinref part="IC2" gate="B" pin="OUT"/>
 <wire x1="66.04" y1="355.6" x2="68.58" y2="355.6" width="0.1524" layer="91"/>
@@ -12807,10 +12824,17 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="-48.26" y1="370.84" x2="-58.42" y2="370.84" width="0.1524" layer="91"/>
 <label x="-48.26" y="370.84" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="DIG4" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D3"/>
-<wire x1="181.61" y1="298.45" x2="172.72" y2="298.45" width="0.1524" layer="91"/>
-<label x="181.61" y="298.45" size="1.778" layer="95"/>
+<wire x1="172.72" y1="300.99" x2="181.61" y2="300.99" width="0.1524" layer="91"/>
+<label x="180.34" y="300.99" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIG6" class="0">
+<segment>
+<wire x1="172.72" y1="306.07" x2="181.61" y2="306.07" width="0.1524" layer="91"/>
+<label x="180.34" y="306.07" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DIG5" class="0">
@@ -12820,9 +12844,20 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <label x="148.59" y="260.35" size="1.778" layer="95" rot="R270"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="D5"/>
-<wire x1="181.61" y1="303.53" x2="172.72" y2="303.53" width="0.1524" layer="91"/>
-<label x="181.61" y="303.53" size="1.778" layer="95"/>
+<wire x1="172.72" y1="303.53" x2="181.61" y2="303.53" width="0.1524" layer="91"/>
+<label x="180.34" y="303.53" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIG7" class="0">
+<segment>
+<label x="180.34" y="308.61" size="1.778" layer="95"/>
+<wire x1="181.61" y1="308.61" x2="172.72" y2="308.61" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="AREF" class="0">
+<segment>
+<wire x1="172.72" y1="331.47" x2="181.61" y2="331.47" width="0.1524" layer="91"/>
+<label x="180.34" y="331.47" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -12841,10 +12876,8 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <net name="RST" class="0">
 <segment>
 <label x="95.25" y="318.77" size="1.778" layer="95"/>
-<wire x1="111.76" y1="318.77" x2="99.06" y2="318.77" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="/RESET"/>
-<wire x1="100.33" y1="318.77" x2="111.76" y2="318.77" width="0.1524" layer="91"/>
-<junction x="111.76" y="318.77"/>
+<wire x1="110.49" y1="318.77" x2="100.33" y2="318.77" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="318.77" x2="110.49" y2="318.77" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -13097,61 +13130,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="WINDVANE" gate="G$1" pin="3"/>
 <pinref part="R21" gate="G$1" pin="2"/>
 <wire x1="-58.42" y1="292.1" x2="-45.72" y2="292.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="DIG8" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="D8"/>
-<wire x1="172.72" y1="313.69" x2="181.61" y2="313.69" width="0.1524" layer="91"/>
-<label x="181.61" y="313.69" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="ADC4" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="A4"/>
-<label x="95.25" y="290.83" size="1.778" layer="95"/>
-<wire x1="100.33" y1="290.83" x2="107.95" y2="290.83" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="290.83" x2="111.76" y2="290.83" width="0.1524" layer="91"/>
-<junction x="111.76" y="290.83"/>
-<wire x1="111.76" y1="290.83" x2="107.95" y2="290.83" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="ADC5" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="A5"/>
-<wire x1="100.33" y1="288.29" x2="106.68" y2="288.29" width="0.1524" layer="91"/>
-<label x="95.25" y="288.29" size="1.778" layer="95"/>
-<wire x1="111.76" y1="288.29" x2="110.49" y2="288.29" width="0.1524" layer="91"/>
-<junction x="111.76" y="288.29"/>
-<wire x1="106.68" y1="288.29" x2="110.49" y2="288.29" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="DIG7" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="D7"/>
-<wire x1="181.61" y1="308.61" x2="172.72" y2="308.61" width="0.1524" layer="91"/>
-<label x="181.61" y="308.61" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="DIG6" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="D6"/>
-<wire x1="181.61" y1="306.07" x2="172.72" y2="306.07" width="0.1524" layer="91"/>
-<label x="181.61" y="306.07" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="DIG4" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="D4"/>
-<wire x1="181.61" y1="300.99" x2="172.72" y2="300.99" width="0.1524" layer="91"/>
-<label x="181.61" y="300.99" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="AREF" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="AREF"/>
-<wire x1="182.88" y1="331.47" x2="172.72" y2="331.47" width="0.1524" layer="91"/>
-<label x="182.88" y="331.47" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

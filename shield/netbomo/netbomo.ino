@@ -4,6 +4,7 @@ float windPower = 0;
 float hertz =0;
 int ibiTime_anemo_1 = 0;
 int lastTime_anemo_1 = 0;
+int temp_errorData =0;
 
 // Définitions pour le wattNode
 float powerProductMoy = 0;
@@ -16,7 +17,7 @@ int windVaneValue = 0;
 //int dirVentMoy=0;//old version
 int windVaneOffSet = 140;
 //new version
-int columns = 8;
+int columns = 16;
 int windDirection = 0;
 
 int node_id=6;  // Référence du node pour Emoncms

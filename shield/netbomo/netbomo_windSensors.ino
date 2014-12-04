@@ -4,16 +4,20 @@ void windSpeed() {//interruption pour comptage des impulsions pour l'anémometre
   /* Calculer la direction du vent entre deux fronts montant*/
 
   ibiTime_anemo_1 = millis(); // On ancre le temps
-  hertz = (float)1000/(ibiTime_anemo_1-lastTime_anemo_1);
-  if (hertz<49) {      // filter against the grid frequency, it's around a wind speed of 130 km/h, no problem for the test period
-    windPower = (windPower + hertz*0.765+0.35)/2; // calibrage en m/s avec données anémo 
-    lastTime_anemo_1 = ibiTime_anemo_1;
+  if (ibiTime_anemo_1-lastTime_anemo_1>20&&ibiTime_anemo_1-temp_errorData>25){
+    hertz = (float)1000/(ibiTime_anemo_1-lastTime_anemo_1);
+    windPower = (windPower + hertz*0.765+0.35)/2;
     if (windPower==0.35) windPower=0.0;
+    temp_errorData=lastTime_anemo_1;
+    lastTime_anemo_1 = ibiTime_anemo_1;
+    }else if (ibiTime_anemo_1-temp_errorData<=25){
+      temp_errorData=ibiTime_anemo_1;
+    }
   }
-}
 
 void powerProduct(){
-  powerProductMoy= (powerProductMoy + 0.750*1000/(ibiTime_PowerProduct-lastTime_PowerProduct)*3600)/2;
+  ibiTime_PowerProduct=millis();
+  powerProductMoy= (powerProductMoy + (0.750*1000/(ibiTime_PowerProduct-lastTime_PowerProduct)*3600))/2;
   lastTime_PowerProduct = ibiTime_PowerProduct;
 }
 // old version
@@ -31,5 +35,6 @@ void windVaneDir(){
   else windVaneValue = windVaneValue - windVaneOffSet;
   windDirection = (windVaneValue + (360/(2*columns)))/(360/columns);
   if (windDirection == columns) windDirection = 0;
+  dirVentMoy = (dirVentMoy + windVaneValue)/2;
 }
 
