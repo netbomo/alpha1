@@ -6,11 +6,11 @@ void sendData(){
   Serial.print(" ");
   Serial.print(windDirection); 
   Serial.print(" ");
-  Serial.print(powerProductMoy);
+  Serial.print(powerProductAverage);
   Serial.println();
   
   windPower = 0; 
-  powerProductMoy = 0;
+  powerProductAverage = 0;
   windDirection = 0;
 }
 
