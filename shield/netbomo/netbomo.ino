@@ -44,7 +44,7 @@ void setup() {
 
 void loop(){
 
-  time_test = millis()-global_lastTime;
+  time_test = millis()-global_lastTime; // référence flotante de temps
 
   if (time_test/echantillonageWindVane>=1) {
     windVaneDir();
