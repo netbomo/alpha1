@@ -1,11 +1,11 @@
 Capteur et interface
 ====================
 
-Nous avons 3 mesures à faire :
+Nous avons 4 mesures à faire :
 
-La mesure de la vitesse du vent
-La direction du vent
-La puissance électrique fournie par l’éolienne
+- La mesure de la vitesse du vent
+- La direction du vent
+- La courant électrique fournie par l’éolienne 
 
 
 
@@ -29,10 +29,6 @@ Le dernier étage est un comparateur à 2 seuils (trigger de Schmitt). Il va per
 
 
 
-nous utilisons ensuite un script arduino pour calculer la fréquence : voir visu_vent_puissance.ino
-
-
-
 ### mesure de la direction du vent.
 
 
@@ -44,7 +40,6 @@ Comme on envoie des données toutes les 10 minutes il faut réaliser plusieurs m
 Pour cela :
 On crée une boucle nous permettant de réaliser plusieurs mesures avant l'envoi, dans cette boucle on remap les valeurs entre 0 et 360 degrés puis on divise le cercle en secteur et on incrémente le secteur correspondant à la direction du vent pour pouvoir faire la moyenne on calcule la moyenne pondérée des secteurs par le nombre de valeurs observé dans le secteur et l'écart-type.
 
-voir visu_vent_puissance_moy.ino
 
 ### Mesure de puissance
 
@@ -53,10 +48,7 @@ On utilise un « Wattnode pulse » qui se branche sur la ligne avec une pince 
 Ce système va calculer la tension, le courant et le déphasage entre les 2 et sortir un signal carré comprit entre 0 et 5V.
 
 
-Figure 3 visu puissance ??
-
 La fréquence de ce signal nous permet d'obtenir la puissance avec la formule :
 
 	P=0,75*f*3600
 
-voir visu_vent_puissance.ino
