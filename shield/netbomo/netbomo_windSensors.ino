@@ -1,10 +1,11 @@
 // Gestion capteurs
 
-void windSpeed() {//interruption pour comptage des impulsions pour l'anémometre
+void windSpeed() {//interruption pour comptage des impulsions pour l'anémomètre
   /* Calculer la direction du vent entre deux fronts montant*/
 
   ibiTime_anemo_1 = millis(); // On ancre le temps
-  if (ibiTime_anemo_1-lastTime_anemo_1>20&&ibiTime_anemo_1-temp_errorData>25){
+  
+  if (ibiTime_anemo_1-lastTime_anemo_1>20&&ibiTime_anemo_1-temp_errorData>25{)
     hertz = (float)1000/(ibiTime_anemo_1-lastTime_anemo_1);
     windPower = (windPower + hertz*0.765+0.35)/2;
     if (windPower==0.35) windPower=0.0;
