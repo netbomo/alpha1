@@ -1,7 +1,0 @@
-(fp_lib_table
-  (lib (name arduino_shields)(type Legacy)(uri "/home/piegealoup/Documents/Kicad lib/modules/arduino_shields.mod")(options "")(descr ""))
-  (lib (name rfm12)(type Legacy)(uri "/home/piegealoup/Documents/Kicad lib/modules/rfm12.mod")(options "")(descr ""))
-  (lib (name diy_connectors)(type Legacy)(uri "/home/piegealoup/Documents/Kicad lib/modules/diy_connectors.mod")(options "")(descr ""))
-  (lib (name bornier)(type KiCad)(uri "/home/piegealoup/Documents/Kicad lib/bornier.pretty")(options "")(descr ""))
-  (lib (name Arduino)(type KiCad)(uri "/home/piegealoup/Documents/Kicad lib/Arduino.pretty")(options "")(descr ""))
-)
