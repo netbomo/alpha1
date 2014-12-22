@@ -30,8 +30,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:arduino_shieldsNCL
-LIBS:rfm12
-LIBS:diy_connectors
 LIBS:netbomo-cache
 EELAYER 25 0
 EELAYER END
@@ -1509,4 +1507,8 @@ Connection ~ 9000 3550
 Wire Wire Line
 	9200 3450 9200 3550
 Connection ~ 9200 3550
+Text Notes 8150 7650 0    60   ~ 0
+22/12/2014
+Text Notes 7400 7500 0    60   ~ 0
+Shield schematic
 $EndSCHEMATC
