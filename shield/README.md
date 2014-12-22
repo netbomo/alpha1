@@ -9,6 +9,12 @@ Caractéristiques recherchées pour le shield :
 
 Avoir la possibilité de mettre un modem rfm12b pour être utilisée dans le cadre du projet Open Energy Monitor
 
-Pouvoir dialoguer avec l'akeru du snootlab
+Shield caracteristics : 
+=======================
 
-Pourquoi pas pouvoir fonctionner avec une carte arduino Yun
+- Arduino connectics
+- 2 anemometer inputs
+- 1 wind vane input
+- 1 Voltage sensor
+- 1 current sensor
+- RFM12B connectics
