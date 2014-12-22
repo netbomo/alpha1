@@ -1,2 +1,2 @@
 Netbomo schematic :
-<img scr="/img/netbomosch.png">
+![Netbomo schematic](img/netbomosch.png)
