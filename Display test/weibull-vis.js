@@ -12,7 +12,7 @@ $(function () {
 	    async: false
 	});
 
-	$.getJSON("http://desplanchesdepalette.org/colibri/php/recupdata.php","id=45499", function (csv) {
+	$.getJSON("http://www.monsite.com/recupdata.php","ID_number", function (csv) {
 		temp_anemo = JSON.parse(csv);
 	});
 	$.ajaxSetup({
