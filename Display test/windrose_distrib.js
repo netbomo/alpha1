@@ -86,11 +86,11 @@ $(function () {
 	});
 
 	
-	$.getJSON("http://desplanchesdepalette.org/colibri/php/recupdata.php","id=45499", function (csv) {
+	$.getJSON("http://www.monsite.com/recupdata.php","id=ID_number", function (csv) {
 		temp_anemo = JSON.parse(csv);
 	});
 	
-	$.getJSON("http://desplanchesdepalette.org/colibri/php/recupdata.php","id=45500", function (diro) {
+	$.getJSON("http://www.monsite.com/recupdata.php","id=ID_number", function (diro) {
 		temp_dir = JSON.parse(diro);
 	});
 
