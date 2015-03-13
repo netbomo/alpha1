@@ -10,7 +10,7 @@ http://desplanchesdepalette.org/colibri/Colibri_Energie.html
 Projet :
 --------
 
-Le but est de créer une shield pouvant par exemple de créer un node pour le système OpenEnergyMonitor ou se greffant sur une carte Akeru, une carte Arduino Yun...
+Le but est de créer une shield pouvant par exemple créer un node pour le système OpenEnergyMonitor ou se greffant sur une carte Akeru, une carte Arduino Yun...
 
 ###Capteur désirés :
 
